@@ -1,0 +1,18 @@
+<div class="category-filters">
+  @for(category of categories(); track category.category) {
+    <div class="filter"
+         [ngClass]="{'active': slotsService.filterSignal().category.category === category.category}"
+         (click)="filterByCategory(category)"
+    >
+      <img [src]="categoryInfo[category.category].iconSrc"
+           alt="category.category"
+           class="filter-img"
+      >
+      <span class="filter-name">{{ categoryInfo[category.category].name }}</span>
+      <span class="filter-count">{{ category.totalGames }}</span>
+    </div>
+
+  } @empty {
+    <div></div>
+  }
+</div>

@@ -1,0 +1,16 @@
+<div class="provider-filters-wrapper">
+  <span class="see-more" (click)="toggleExpand()">
+  See More <img src="assets/icons/dropdown.png" alt="dropdown"/>
+</span>
+
+  <div class="provider-filters" [ngClass]="{expanded}">
+    @for(provider of providers(); track provider._id) {
+      <div class="filter"
+           [ngClass]="{'active': slotsService.filterSignal().provider === provider.provider}"
+           (click)="filterByProvider(provider.provider)"
+      >
+        <span class="filter-name">{{ provider.name | uppercase }}</span>
+      </div>
+    }
+  </div>
+</div>

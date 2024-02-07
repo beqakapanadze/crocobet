@@ -1,0 +1,27 @@
+@import 'mixins';
+
+.provider-filters-wrapper {
+  overflow: hidden;
+
+  .see-more {
+    float: right;
+    padding: 15px 10px 16px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFF;
+  }
+
+  .provider-filters {
+    background-color: var(--filter-provider-bg);
+    border-radius: 0 0 6px 6px;
+    font-weight: 500;
+    max-height: 52px;
+    transition: max-height 0.5s ease-in-out;
+    @include defaultFilterStyle;
+
+    &.expanded {
+      max-height: 1000px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<div id="sidebar">
+  <div class="sidebar-logo">
+    <img [src]="'assets/logo/cb-logo.png'" alt="Logo" height="46" width="59">
+  </div>
+  <div class="sidebar-link-list">
+    @for (link of sidebarLinks; track link.linkName) {
+      <a
+        class="sidebar-link"
+        [routerLink]="link.routerLink"
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact: true}"
+        [attr.title]="link.linkName"
+      >
+        <img [src]="link.iconSrc" [alt]="link.linkName">
+        <span>{{ link.linkName | uppercase }}</span>
+      </a>
+    }
+  </div>
+</div>

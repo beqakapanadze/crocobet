@@ -1,0 +1,8 @@
+<div class="slot-card">
+  <div class="slot-image-wrapper">
+    <img class="slot-image" [src]="slot.image" [alt]="slot.name" />
+    <span class="slot-provider">{{slot.provider | uppercase}}</span>
+    <button class="slot-play-button">PLAY</button>
+  </div>
+  <span class="slot-name">{{slot.name}}</span>
+</div>

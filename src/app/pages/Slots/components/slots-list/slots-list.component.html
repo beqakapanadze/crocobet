@@ -1,0 +1,7 @@
+<div class="card-container">
+  <ng-container *ngFor="let slot of slots(); trackBy: trackGameId">
+    <div class="card">
+      <app-slots-card [slot]="slot"></app-slots-card>
+    </div>
+  </ng-container>
+</div>

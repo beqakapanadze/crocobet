@@ -1,0 +1,34 @@
+@import 'mixins';
+
+.category-filters {
+  background-color: var(--filter-category-bg);
+  border-radius: 6px 6px 0 0;
+  @include defaultFilterStyle;
+
+  .filter {
+    gap: 10px;
+
+    &:hover, &.active {
+      .filter-count {
+        color: var(--filter-color-active);
+      }
+
+      .filter-name {
+        color: var(--text-color-active);
+      }
+    }
+
+    .filter-img {
+      width: 16px;
+      height: 18px;
+    }
+
+    .filter-count {
+      position: absolute;
+      right: 0;
+      top: 8px;
+      font-size: 11px;
+      color: var(--text-color-inactive);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import 'mixins';
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-bg);
+  color: #fff;
+
+  .sidebar-logo {
+    margin: 10px 0 20px;
+    cursor: pointer;
+  }
+
+  .sidebar-link-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: var(--sidebar-font-size);
+
+    .sidebar-link {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      width: 100%;
+      height: var(--sidebar-link-height);
+      cursor: pointer;
+      color: var(--text-color-inactive);
+
+      &:hover, &.active {
+        @include activeLinkStyle;
+      }
+    }
+  }
+}
+

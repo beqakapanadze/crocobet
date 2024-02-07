@@ -1,0 +1,38 @@
+$content-bg: #1A1E23;
+$content-padding: 8px;
+
+$text-color-inactive: #6A7787;
+$text-color-active: #FFF;
+
+$filter-color-active: #15AF44;
+$filter-category-bg: #1D242C;
+$filter-provider-bg: #272D36;
+
+$sidebar-bg: #2A3139;
+$sidebar-width: 78px;
+$sidebar-link-height: 77px;
+$sidebar-link-highlight: #189541;
+$sidebar-font-size: 14px;
+
+$header-bg: #252B33;
+$header-height: 60px;
+
+$slot-btn-bg: #15AF44;
+
+:root {
+  --text-color-inactive: #{$text-color-inactive};
+  --text-color-active: #{$text-color-active};
+  --filter-color-active: #{$filter-color-active};
+  --filter-category-bg: #{$filter-category-bg};
+  --filter-provider-bg: #{$filter-provider-bg};
+  --content-bg: #{$content-bg};
+  --content-padding: #{$content-padding};
+  --sidebar-bg: #{$sidebar-bg};
+  --sidebar-width: #{$sidebar-width};
+  --sidebar-link-height: #{$sidebar-link-height};
+  --sidebar-link-highlight: #{$sidebar-link-highlight};
+  --sidebar-font-size: #{$sidebar-font-size};
+  --header-bg: #{$header-bg};
+  --header-height: #{$header-height};
+  --slot-btn-bg: #{$slot-btn-bg}
+}

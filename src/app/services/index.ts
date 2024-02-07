@@ -1,0 +1,1 @@
+export { SlotsService } from './slots'
