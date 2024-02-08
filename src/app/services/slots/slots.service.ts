@@ -52,6 +52,10 @@ export class SlotsService {
     `${this.baseUrl}?type=slot&platform=desktop`
   ).pipe(map((response) => {
       return response.data
+    }),
+    catchError((error: HttpErrorResponse) => {
+      console.error(error);
+      return []
     })
   );
 
