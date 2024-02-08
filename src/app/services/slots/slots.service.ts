@@ -37,7 +37,11 @@ export class SlotsService {
         ), tap(
           categories =>
             this.setFilters({category: categories[0], provider: ''})
-        )
+        ),
+        catchError((error: HttpErrorResponse) => {
+          console.error(error);
+          return []
+        })
       );
 
   slotCategoriesSig = toSignal(this.slotCategories$, {
